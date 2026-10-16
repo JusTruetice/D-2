@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ყინულის მოედანი ❄️</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@300;500&family=Noto+Sans+Georgian:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c" aria-hidden="true"></canvas>
+
+<main id="intro" class="layer">
+  <p id="l1" class="serif fade"></p>
+  <p id="l2" class="serif fade"></p>
+  <button id="start" class="btn fade" style="margin-top:1.6rem"></button>
+</main>
+
+<section id="inv" class="layer">
+  <p id="q" class="serif fade"></p>
+  <div id="btns" class="row fade">
+    <button id="yes" class="btn yes"></button>
+    <button id="no" class="btn ghost"></button>
+  </div>
+</section>
+
+<section id="end" class="layer">
+  <p id="bye" class="serif fade"></p>
+  <p id="bye2" class="serif fade"></p>
+  <button id="rep" class="btn ghost fade" style="margin-top:2rem"></button>
+</section>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="fl" viewBox="-10 -10 20 20"><g fill="#7fd0ff"><circle cy="-5.2" r="3.7"/><circle cy="-5.2" r="3.7" transform="rotate(72)"/><circle cy="-5.2" r="3.7" transform="rotate(144)"/><circle cy="-5.2" r="3.7" transform="rotate(216)"/><circle cy="-5.2" r="3.7" transform="rotate(288)"/></g><circle r="2.4" fill="#f4fbff"/></symbol></svg>
+
+<section id="env" class="layer">
+  <div id="envWrap" class="fade">
+    <button id="envBtn" aria-label="გახსენი წერილი">
+      <svg viewBox="0 0 320 240" aria-hidden="true">
+        <defs>
+          <linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3466"/><stop offset="1" stop-color="#0e1b3f"/></linearGradient>
+          <radialGradient id="gs"><stop offset="0" stop-color="#f4fcff"/><stop offset="1" stop-color="#8fb6d6"/></radialGradient>
+        </defs>
+        <path id="flapO" d="M10 70 L160 -30 L310 70 Z" fill="#223a72" stroke="#9fe6ff" stroke-opacity=".6" stroke-width="1.5"/>
+        <rect id="paper" x="40" y="76" width="240" height="150" rx="6" fill="#e8f6ff"/>
+        <rect x="10" y="70" width="300" height="160" rx="10" fill="url(#gb)" stroke="#9fe6ff" stroke-opacity=".65" stroke-width="1.5"/>
+        <path d="M10 70 L160 160 L10 230 Z M310 70 L160 160 L310 230 Z" fill="#142a58" stroke="#9fe6ff" stroke-opacity=".3"/>
+        <path d="M10 230 L160 150 L310 230 Z" fill="#0f2149" stroke="#9fe6ff" stroke-opacity=".35"/>
+        <path id="flapC" d="M10 70 L160 170 L310 70 Z" fill="#223a72" stroke="#9fe6ff" stroke-opacity=".6" stroke-width="1.5"/>
+        <g id="seal"><circle cx="160" cy="166" r="21" fill="url(#gs)"/><path d="M160 154v24M149.6 160l20.8 12M149.6 172l20.8-12" stroke="#5a7ea8" stroke-width="2.2" stroke-linecap="round"/></g>
+      </svg>
+    </button>
+  </div>
+  <p id="e1" class="serif fade"></p>
+  <p id="e2" class="serif fade"></p>
+  <button id="openBtn" class="btn ghost fade" style="margin-top:1rem"></button>
+</section>
+
+<section id="letter" class="layer">
+  <div id="card">
+    <p id="c1" class="serif fade"></p>
+    <p id="c2" class="serif fade"></p>
+    <button id="showBtn" class="btn fade"></button>
+  </div>
+</section>
+
+<section id="title" class="layer">
+  <p id="t1" class="serif fade"></p>
+  <h1 id="t2" class="serif fade"></h1>
+  <p id="t3" class="serif fade"></p>
+  <button id="goBtn" class="btn ghost fade"></button>
+</section>
+<div id="petals" aria-hidden="true"></div>
+<div id="grain" aria-hidden="true"></div>
+
+<div id="hint" class="fade" role="note"></div>
+<div id="hud">
+  <button id="pick" class="hud" aria-label="Choose your own music file">🎵</button>
+  <button id="mute" class="hud" aria-label="Mute music" aria-pressed="false">🔊</button>
+</div>
+<input id="file" type="file" accept="audio/*" hidden>
+<audio id="bgm" loop preload="auto" src="assets/La Seine and I by Matthieu Chedid and Vanessa Paradis.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
